@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <GroupBox x:Name="main_groupBox" Header="">
+            <Canvas>
+                <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" Canvas.Left="248" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
+                <GroupBox x:Name="gbRaised" Header="Raised" Height="252" Width="632" Canvas.Left="79" Canvas.Top="89" FontWeight="Bold">
+                    <GroupBox x:Name="gbFilled" Header="Filled" FontWeight="Bold">
+                        <Canvas>
+                            <Label x:Name="lblGlazedRaised" Content="Glazed" Canvas.Left="235" Canvas.Top="69"/>
+                            <TextBox x:Name="txtGlazedRaised" Canvas.Left="428" Canvas.Top="69" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" UndoLimit="99" IsReadOnly="True"/>
+                            <Label x:Name="lblSugarRaised" Content="Sugar" Canvas.Left="235" Canvas.Top="124"/>
+                        </Canvas>
+                    </GroupBox>
+                </GroupBox>
+            </Canvas>
+        </GroupBox>
 
     </Grid>
 </Window>
