@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     <Grid>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="130">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Doughnuts">
+                <MenuItem Header="Make"/>
+                <MenuItem Header="Raised">
+                    <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                    <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                </MenuItem>
+                <MenuItem Header="Filled"/>
+            </MenuItem>
+        </Menu>
         <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Canvas>
             <GroupBox x:Name="gbFilled" Header="Filled" Height="155" Width="240" Canvas.Left="425" Canvas.Top="70" FontWeight="Bold">
