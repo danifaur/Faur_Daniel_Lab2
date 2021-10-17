@@ -1,26 +1,48 @@
-﻿<Window x:Class="Faur_Daniel_Lab2.MainWindow"
+﻿<Window x:Name="frmMain" x:Class="Faur_Daniel_Lab2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Faur_Daniel_Lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     <Grid>
-        <GroupBox x:Name="main_groupBox" Header="">
-            <Canvas>
-                <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" Canvas.Left="248" Canvas.Top="10" FontSize="24" FontWeight="Bold"/>
-                <GroupBox x:Name="gbRaised" Header="Raised" Height="252" Width="632" Canvas.Left="79" Canvas.Top="89" FontWeight="Bold">
-                    <GroupBox x:Name="gbFilled" Header="Filled" FontWeight="Bold">
-                        <Canvas>
-                            <Label x:Name="lblGlazedRaised" Content="Glazed" Canvas.Left="235" Canvas.Top="69"/>
-                            <TextBox x:Name="txtGlazedRaised" Canvas.Left="428" Canvas.Top="69" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" UndoLimit="99" IsReadOnly="True"/>
-                            <Label x:Name="lblSugarRaised" Content="Sugar" Canvas.Left="235" Canvas.Top="124"/>
-                        </Canvas>
-                    </GroupBox>
-                </GroupBox>
-            </Canvas>
-        </GroupBox>
-
+        <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Canvas>
+            <GroupBox x:Name="gbFilled" Header="Filled" Height="155" Width="240" Canvas.Left="425" Canvas.Top="70" FontWeight="Bold">
+                <Canvas>
+                    <Label x:Name="lblLemonFilled" Content="Lemon" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+                    <Label x:Name="lblChocolateFilled" Content="Chocolate" HorizontalAlignment="Center" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+                    <Label x:Name="lblVanilaFilled" Content="Vanila" HorizontalAlignment="Center" Margin="10,90,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+                    <TextBox x:Name="txtLemonFilled" Canvas.Left="90" Canvas.Top="15" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" IsReadOnly="True"/>
+                    <TextBox x:Name="txtChocolateFilled" Canvas.Left="90" Canvas.Top="55" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" IsReadOnly="True"/>
+                    <TextBox x:Name="txtVanilaFilled" Canvas.Left="90" Canvas.Top="95" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" IsReadOnly="True"/>
+                </Canvas>
+            </GroupBox>
+            <GroupBox x:Name="gbRaised" Header="Raised" Height="125" Width="230" Canvas.Left="100" Canvas.Top="80" FontWeight="Bold">
+                <Canvas>
+                    <Label x:Name="lblGlazedRaised" Content="Glazed" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+                    <Label x:Name="lblSugarRaised" Content="Sugar" HorizontalAlignment="Center" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+                    <TextBox x:Name="txtGlazedRaised" Canvas.Left="80" Canvas.Top="15" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" IsReadOnly="True"/>
+                    <TextBox x:Name="txtSugarRaised" Canvas.Left="80" Canvas.Top="55" Text="0" TextWrapping="Wrap" Width="120" FontWeight="Normal" IsReadOnly="True"/>
+                </Canvas>
+            </GroupBox>
+            <GroupBox x:Name="gbScale" Header="Current Sale" Height="188" Width="730" FontWeight="Bold" Canvas.Left="30" Canvas.Top="235">
+                <Canvas>
+                    <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Center" Margin="20,10,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal"/>
+                    <Label x:Name="lblType" Content="Type" HorizontalAlignment="Center" Margin="140,10,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal"/>
+                    <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Center" Margin="400,10,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal"/>
+                    <Label x:Name="lblTotal" Content="Total" HorizontalAlignment="Center" Margin="400,120,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold"/>
+                    <TextBox x:Name="txtQuantity" Canvas.Left="90" Canvas.Top="15" Text="0" TextWrapping="Wrap" Width="30" FontWeight="Normal" IsReadOnly="True"/>
+                    <TextBox x:Name="txtPrice" Canvas.Left="450" Canvas.Top="15" Text="0" TextWrapping="Wrap" Width="130" FontWeight="Normal"/>
+                    <TextBox x:Name="txtTotal" Canvas.Left="450" Canvas.Top="125" Text="0" TextWrapping="Wrap" Width="130" FontWeight="Bold" IsReadOnly="True"/>
+                    <ComboBox Canvas.Left="185" Canvas.Top="13" Width="120"/>
+                    <ListBox x:Name="lstSale" Canvas.Left="25" Canvas.Top="45" Height="65" Width="555"/>
+                    <Button x:Name="btnAddToSale" Content="Add To Sale" Canvas.Left="600" Canvas.Top="45" FontWeight="Normal" Width="100" Height="25"/>
+                    <Button x:Name="btnRemoveItem" Content="Remove Item" Canvas.Left="600" Canvas.Top="80" FontWeight="Normal" Width="100" Height="25"/>
+                    <Button x:Name="btnCheckOut" Content="Checkout" Canvas.Left="600" Canvas.Top="120" FontWeight="Bold" Width="100" Height="30"/>
+                </Canvas>
+            </GroupBox>
+        </Canvas>
     </Grid>
 </Window>
